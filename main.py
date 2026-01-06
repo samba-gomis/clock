@@ -1,9 +1,5 @@
 import time
 from ask_time import ask_time
-#from set_current_time import set_current_time
-#from set_alarm import set_alarm_time
-#from display_current_time import display_current_time
-#from display_menu import display_menu
 from update_time import update_time
 from display import display_menu
 from display import display_current_time
