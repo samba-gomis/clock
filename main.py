@@ -6,6 +6,7 @@ from display_current_time import display_current_time
 from display_menu import display_menu
 from update_time import update_time
 
+alarm_time = (24,0,0)
 time_provided = ask_time()
 current_time = set_current_time(time_provided)
 tic = time.perf_counter()
@@ -23,8 +24,10 @@ while True:
                         toc = time.perf_counter()
                     current_time = update_time(current_time,tic,toc)
                     if current_time == alarm_time:
+                        tic = time.perf_counter()
                         input("BEEP BEEP BEEP BEEP...")
                         toc = time.perf_counter()
+                        current_time = update_time(current_time,tic,toc)
             case 2:
                 time_provided = ask_time()
                 current_time = set_current_time(time_provided)
