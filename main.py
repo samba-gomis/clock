@@ -22,6 +22,9 @@ while True:
                     while (toc - tic) < 1:
                         toc = time.perf_counter()
                     current_time = update_time(current_time,tic,toc)
+                    if current_time == alarm_time:
+                        input("BEEP BEEP BEEP BEEP...")
+                        toc = time.perf_counter()
             case 2:
                 time_provided = ask_time()
                 current_time = set_current_time(time_provided)
