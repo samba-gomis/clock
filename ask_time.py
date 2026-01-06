@@ -16,5 +16,5 @@ def ask_time():
             print("L'Entrée que vous venez de saisir est éronnée.")
 
 
-time = ask_time()
-print(time)
+#time = ask_time()
+#print(time)
