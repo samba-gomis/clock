@@ -7,5 +7,6 @@ def ask_time():
     second = int(input("Veuillez entrer les secondes : "))
     return hour,minute,second
 
-time = ask_time()
-print(time)
+#time = ask_time()
+#print(time)
+	
