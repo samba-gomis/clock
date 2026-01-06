@@ -29,7 +29,10 @@ while True:
                 time_provided = ask_time()
                 current_time = set_current_time(time_provided)
             case 3:
+                print("Alarm setup:")
                 time_provided = ask_time()
                 alarm_time = set_alarm_time(time_provided)
+            case 4:
+                quit()
     except KeyboardInterrupt:
         pass
