@@ -1,10 +1,8 @@
 from time import perf_counter
 from ask_time import ask_time
 from update_time import update_time
-from display import display_menu
-from display import display_current_time
-from set import set_current_time
-from set import set_alarm_time
+from display import display_menu, display_current_time
+from set import set_current_time, set_alarm_time
 
 def main():
     time_provided = ask_time()
@@ -13,7 +11,8 @@ def main():
     tic = perf_counter()
     while True:
         try:
-            menu_index,toc = display_menu()
+            menu_index = display_menu()
+            toc = perf_counter()
             current_time = update_time(current_time,tic,toc)
             match menu_index:
                 case 1:
