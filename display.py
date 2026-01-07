@@ -1,8 +1,4 @@
-import time
-
 def display_menu():
-
-
         print("\nWhat do you want to do?")
         print("1 - Display time")
         print("2 - Set current time")
@@ -12,8 +8,7 @@ def display_menu():
             try:
                 menu_index = int(input("Your choice: "))
                 if menu_index > 0 and menu_index < 5:
-                    toc = time.perf_counter()
-                    return menu_index, toc
+                    return menu_index
                 else:
                     print("Please choose between 1-4.")
             except:
