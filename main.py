@@ -6,6 +6,7 @@ from display import display_current_time
 from set import set_current_time
 from set import set_alarm_time
 time_provided = ask_time()
+alarm_time = (24,0,0)
 current_time = set_current_time(time_provided)
 tic = time.perf_counter()
 while True:
