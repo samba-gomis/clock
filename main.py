@@ -1,13 +1,13 @@
 import time
 from ask_time import ask_time
-from set_current_time import set_current_time
-from set_alarm import set_alarm_time
-from display_current_time import display_current_time
-from display_menu import display_menu
 from update_time import update_time
-
+from display import display_menu
+from display import display_current_time
+from set import set_current_time
+from set import set_alarm_time
 alarm_time = (24,0,0)
 time_provided = ask_time()
+alarm_time = (24,0,0)
 current_time = set_current_time(time_provided)
 tic = time.perf_counter()
 while True:
