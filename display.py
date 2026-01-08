@@ -15,7 +15,7 @@ def display_menu():
             except:
                 print("Wrong input,please try again.")
 
-def display_current_time(current_time, am_pm):
+def display_current_time(current_time,am_pm,update_mode=True):
     h, m, s = current_time
     suffix = ""
 
@@ -45,4 +45,7 @@ def display_current_time(current_time, am_pm):
     else:
         seconds = str(s)
 
-    print(f"  {hours}:{minutes}:{seconds}{suffix}", end='\r')
+    if update_mode:
+        print(f"  {hours}:{minutes}:{seconds}{suffix}", end='\r')
+    else:
+        print(f"  {hours}:{minutes}:{seconds}{suffix}")
