@@ -1,6 +1,4 @@
-import display
 def set_current_time(time):
-    display.display_current_time(time)
     return time
 
 def set_alarm_time(time_provided):
