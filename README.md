@@ -1,6 +1,6 @@
 # Grandma's Clock
 ### A simple console python alarm clock
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/release/python-3100/)
+[![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/downloads/release/python-3120/)
 
 ```
    ______                     __               _      
@@ -23,21 +23,41 @@ Grandma's clock is a simple python console alarm clock. It cans display the time
 
 ## Dependencies
 - **python3**
+- **pip**
+  - **keyboard**
 
-## Install
+# Install
 
-# Commands
+## Commands
 
 Clone the repository locally
 ```bash
 git clone https://github.com/samba-gomis/clock.git
 ```
 
+If you are familiar with python virtual environments you can activate it and avoid global *keyboard* module installation.
+
+**Windows**
+```bash
+powershell -ExecutionPolicy ByPass -c .venv/Scripts/Activate.ps1
+```
+**Linux**
+```bash
+.venv/Scripts/activate
+```
+
+Or you can install the pip dependencies on all your system with
+```bash
+pip install keyboard
+```
+
 ## Features
 
 - **Set current time**: You can set the time providing the current hour, minute and second.
-- **Display time**: Display time in 13:34:10 format.
+- **Display time**: You can display time.
 - **Set an alarm**: You can set an alarm providing the alarm hour, minute and second. The clock display a "BEEP BEEP" message when the current time reaches the alarm time.
+- **Switch 12H - 24H display**: You can display your time in both modes. For example, 13:04:45 in 24H mode will be displayed 01:04:45 PM in 12H mode.
+- **Pause time**: You can pause time when displaying it hitting *spacebar*.
 
 
 ## Setup
@@ -46,19 +66,15 @@ When you start the clock, it systematically asks you to set the time.
 
 ## Quick Start
 
-1. Navigate to your project's root directory:
-
-   ```bash
-   cd /path/to/your/clock
-   ```
-
-2. Run clock:
+1. Run clock:
 
    ```bash
    py main.py
    ```
 
-3. Set the clock
+2. Set the clock
+
+3. Use numbers to browse the menu
 
    ## Challenges
 - Git merge conflicts
@@ -66,6 +82,11 @@ When you start the clock, it systematically asks you to set the time.
    ## Roadmap
 - Use Threading
   - Modify the whole architecture to use threading instead of Tic Toc mechanic
+- Add a GUI
+  - Make a GUI with tkinter
+- Add sound
+  - The alarm should play a real alarm sound
+  - Add the possibility to select the desired alarm
 
    ## Authors
   - Childebert Bouaichi
