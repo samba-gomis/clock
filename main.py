@@ -7,6 +7,7 @@ from set import set_current_time, set_alarm_time
 def main():
     time_provided = ask_time()
     alarm_time = (24,0,0)
+    am_pm = False
     current_time = set_current_time(time_provided)
     tic = perf_counter()
     while True:
@@ -18,7 +19,7 @@ def main():
                 case 1:
                     while True:
                         toc = 0
-                        display_current_time(current_time)
+                        display_current_time(current_time,am_pm)
                         tic = perf_counter()
                         while (toc - tic) < 1:
                             toc = perf_counter()
@@ -36,6 +37,12 @@ def main():
                     time_provided = ask_time()
                     alarm_time = set_alarm_time(time_provided)
                 case 4:
+                    am_pm = not am_pm
+                    if am_pm:
+                        print("Switch display to AM/PM mode.")
+                    else:
+                        print("Switch display to 24h mode.")
+                case 5:
                     quit()
         except KeyboardInterrupt:
             pass
