@@ -4,14 +4,8 @@ from time_control import update_time, pause_time
 from display import display_menu, display_current_time
 from set import set_current_time, set_alarm_time
 from keyboard import is_pressed
-from playsound3 import playsound
+from play_sound import play_alarm_sound
 import threading
-
-def play_alarm_sound():
-    try:
-        playsound('./alarms/alarm1.mp3')
-    except Exception as e:
-        print(f"Error playing sound: {e}")
 
 def main():
     time_provided = ask_time()
